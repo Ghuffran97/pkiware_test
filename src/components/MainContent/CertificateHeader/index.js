@@ -6,7 +6,7 @@ const { Title } = Typography
 const { Search } = Input;
 const CertificateHeader = () => {
     return (
-        <Flex justify='space-between' align='baseline' style={{ marginBottom: "50px" }}>
+        <Flex justify='space-between' align='baseline' style={{ marginBottom: "30px" }}>
             <Title level={3} > My Certificate </Title>
             <Search
                 placeholder="Search Certificate"
