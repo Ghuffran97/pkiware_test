@@ -54,7 +54,7 @@ const TopBar = ({ background }) => {
               fontSize: "25px",
             }}
           />
-          <Flex gap={6} align="center">
+          <Flex gap={10} align="center">
             <Flex vertical={true} align="flex-end">
               <h4 style={{ padding: 0, margin: 0 }}>Test work</h4>
               <p style={{ margin: 0, padding: 0 }}>Admin</p>
@@ -69,7 +69,7 @@ const TopBar = ({ background }) => {
             />
           </Flex>
 
-          <Flex gap={10}>
+          <Flex gap={10} align="center">
             <QuestionOutlined
               style={{
                 background: "#dcf0fa",
