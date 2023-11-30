@@ -1,36 +1,22 @@
-import React from "react";
-import {
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-} from "@ant-design/icons";
-import { Layout, Menu, theme } from "antd";
-import styled from "styled-components";
-
+import React from 'react';
+import { QuestionCircleOutlined, RightOutlined, UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
+import { Flex, Layout, Menu, Typography, theme } from 'antd';
+import styled from 'styled-components';
+import CertificateTable from '../../components/MainContent/CertificateTable';
 import TopBar from "../../components/Topbar";
 
-const { Content, Footer, Sider } = Layout;
+const { Header, Content, Footer, Sider } = Layout;
 
-const Logo = styled.div`
-  height: 32px;
-  margin: 16px;
-  color: white;
-
-  h4 {
-    transition: all 0.3s ease;
-  }
-
-  h4.collapsed {
-    transform: scale(0.8);
-    opacity: 0.7;
-  }
-`;
+const { Title } = Typography
 const App = () => {
   const {
     token: { colorBgContainer },
   } = theme.useToken();
   return (
-    <Layout>
+    <Layout style={{ height: "100vh" }}>
+      <div style={{ background: "teal", height: "45px", width: "200px", position: "absolute", top: 0, zIndex: 999999, left: 0, }}>
+
+      </div>
       <Sider
         breakpoint="lg"
         collapsedWidth="0"
@@ -40,31 +26,33 @@ const App = () => {
         onCollapse={(collapsed, type) => {
           console.log(collapsed, type);
         }}
+        style={{ padding: "12px", maxWidth: "400px", marginTop: "45px" }}
       >
-        <Logo>
-          <h4>PKIware</h4>
-        </Logo>
+        <Flex align='baseline' gap={16}>
+          <QuestionCircleOutlined style={{ color: "white" }} />
+          <Title level={4} style={{ color: "white" }}>
+            Dashboard
+          </Title>
+          <RightOutlined style={{ color: "white" }} />
+        </Flex>
         <Menu
           theme="dark"
           mode="inline"
-          defaultSelectedKeys={["4"]}
-          items={[
-            UserOutlined,
-            VideoCameraOutlined,
-            UploadOutlined,
-            UserOutlined,
-          ].map((icon, index) => ({
-            key: String(index + 1),
-            icon: React.createElement(icon),
-            label: `nav ${index + 1}`,
-          }))}
+          defaultSelectedKeys={['4']}
+          items={[UserOutlined, VideoCameraOutlined, UploadOutlined, UserOutlined].map(
+            (icon, index) => ({
+              key: String(index + 1),
+              icon: React.createElement(icon),
+              label: `nav ${index + 1}`,
+            }),
+          )}
         />
       </Sider>
       <Layout>
         <TopBar background={colorBgContainer} />
         <Content
           style={{
-            margin: "24px 16px 0",
+            margin: '24px 16px 0',
           }}
         >
           <div
@@ -74,15 +62,14 @@ const App = () => {
               background: colorBgContainer,
             }}
           >
-            content
+            <CertificateTable />
           </div>
         </Content>
         <Footer
           style={{
-            textAlign: "center",
+            textAlign: 'center',
           }}
         >
-          Ant Design ©2023 Created by Ant UED
         </Footer>
       </Layout>
     </Layout>
