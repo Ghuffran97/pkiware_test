@@ -7,6 +7,7 @@ import {
   QuestionOutlined,
 } from "@ant-design/icons";
 import { RiMenuSearchLine } from "react-icons/ri";
+import { StyledAvatar } from "./styled";
 
 const TopBar = ({ background }) => {
   return (
@@ -18,7 +19,7 @@ const TopBar = ({ background }) => {
               color: "#81A7AE",
               fontSize: "30px",
               borderRadius: "5px",
-              backgroundColor: "#dcf0fa",
+              backgroundColor: "#F3F3F3",
               padding: "5px",
             }}
           />
@@ -28,7 +29,7 @@ const TopBar = ({ background }) => {
               color: "#81A7AE",
               fontSize: "30px",
               borderRadius: "5px",
-              backgroundColor: "#dcf0fa",
+              backgroundColor: "#F3F3F3",
               padding: "5px",
             }}
           />
@@ -39,7 +40,7 @@ const TopBar = ({ background }) => {
               color: "#81A7AE",
               fontSize: "40px",
               borderRadius: "5px",
-              backgroundColor: "#dcf0fa",
+              backgroundColor: "#F3F3F3",
               padding: "5px",
             }}
           />
@@ -56,10 +57,10 @@ const TopBar = ({ background }) => {
           />
           <Flex gap={10} align="center">
             <Flex vertical={true} align="flex-end">
-              <h4 style={{ padding: 0, margin: 0 }}>Test work</h4>
+              <h3 style={{ padding: 0, margin: 0 }}>Stieve Wozniak</h3>
               <p style={{ margin: 0, padding: 0 }}>Admin</p>
             </Flex>
-            <Avatar
+            <StyledAvatar
               size={50}
               src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
               style={{
