@@ -11,3 +11,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.custom-row > td {
+  border-bottom: 10px solid transparent;
+  padding: 12px 8px; /* Adjust the padding as needed */
+}
+
+/* Remove border for last cell in each row */
+.custom-row > td:last-child {
+  border-bottom: none;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-pagination .ant-pagination-item-active {
+  font-weight: 600;
+  background-color:teal;
+  font-size: 16px;
+  width:45px !important;
+  height: 32px !important;
+}
+:where(.css-dev-only-do-not-override-2q8sxy).ant-pagination.ant-pagination-mini:not(.ant-pagination-disabled) .ant-pagination-item:not(.ant-pagination-item-active) {
+  font-weight: 600;
+  font-size: 16px;
+  width:45px !important;
+  height: 32px !important;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-pagination .ant-pagination-item-active a {
+  color:white
+
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-pagination.ant-pagination-mini .ant-pagination-prev, :where(.css-dev-only-do-not-override-2q8sxy).ant-pagination.ant-pagination-mini .ant-pagination-next{
+  display: none;
+}
+
+.ant-pagination-options{
+   display: none !important;
+}
